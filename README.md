@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# 📦 Datta Groups – Premium Trading & Electronics Solutions Website
 
-## Project info
+## 🌟 Overview  
+Datta Groups is a global trading and electronics solutions company specializing in **rice, seafood, paddy, coconut, maize export-import** and **advanced electronics solutions** (CCTV, biometric systems, home automation).  
+This website is designed to showcase Datta Traders as a premium brand with a **dark blue, white, and gold** color palette that conveys **trust, quality, and professionalism**.
 
-**URL**: https://lovable.dev/projects/0751810a-685a-40fc-b082-fdcaa679ba65
+---
 
-## How can I edit this code?
+## 🖌 Design System  
+### 🎨 Color Palette  
+| Color         | Hex Code  | Usage                       |
+|----------------|-----------|----------------------------|
+| **Dark Blue**  | `#0D1B2A` | Primary background, headers |
+| **White**      | `#FFFFFF` | Text, content backgrounds   |
+| **Gold**       | `#D4AF37` | Accents, buttons, highlights|
 
-There are several ways of editing your application.
+### 🖋 Typography  
+- **Primary Font:** Montserrat (Bold for headings, Medium/Regular for body text)  
+- **Secondary Font:** Open Sans (Body text and UI elements)  
 
-**Use Lovable**
+### 🧩 UI Components  
+- Buttons: Rounded corners (`border-radius: 12px`), gold hover effect  
+- Cards: Soft shadows, smooth hover animations  
+- Navigation: Sticky header with logo and clear call-to-action buttons  
+- Sections: Alternating light/dark backgrounds for clear separation  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0751810a-685a-40fc-b082-fdcaa679ba65) and start prompting.
+---
+datta-traders-website/
+│
+├── public/
+│ ├── assets/ # Images & icons
+│ └── favicon.ico
+│
+├── src/
+│ ├── components/ # Reusable components (Navbar, Footer, Buttons)
+│ ├── pages/ # Home, About, Trading, Electronics, Industries, Portfolio, Contact
+│ ├── styles/ # Global CSS, theme variables
+│ ├── App.jsx # Main App with routing
+│ └── index.js # React entry point
+│
+├── .gitignore
+├── package.json
+└── README.md
 
-Changes made via Lovable will be committed automatically to this repo.
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📑 Pages & Features  
+1. **Home** – Hero banner with trading & electronics highlights, quick links to services  
+2. **About** – Company story, mission, and values  
+3. **Trading** – Detailed categories: Rice, Seafood, Paddy, Coconut, Maize with product galleries  
+4. **Electronics** – CCTV, biometric systems, home automation, and IoT solutions  
+5. **Industries** – Sectors served (retailers, exporters, wholesalers, factories)  
+6. **Portfolio** – Case studies or successful trading projects  
+7. **Contact** – Interactive form, map, clickable phone/email links  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✨ Modern Features  
+- **Responsive Design:** Mobile-first, works on all devices  
+- **Animations:** Smooth transitions for buttons, sections, and hover effects  
+- **SEO Optimization:** Semantic tags, meta descriptions, Open Graph tags  
+- **Image Assets:** High-quality, generated hero and product images (dark blue/gold aesthetic)  
+- **Routing:** React Router for seamless navigation  
+- **Performance:** Optimized images and lazy loading  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🛠 Tech Stack
 
-**Edit a file directly in GitHub**
+Frontend: React + Vite
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Styling: Tailwind CSS
 
-**Use GitHub Codespaces**
+Routing: React Router
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Animations: Framer Motion
 
-## What technologies are used for this project?
+Icons: Lucide-React
 
-This project is built with:
+## 📂 Project Structure  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/0751810a-685a-40fc-b082-fdcaa679ba65) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
