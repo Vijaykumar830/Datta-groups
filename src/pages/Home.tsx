@@ -56,8 +56,8 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      company: "",
+      name: "DALVKOT BIO FUELS Private Limited",
+      company: "DALVKOT",
       message: "Excellent quality rice exports and timely delivery. Datta Traders has been our trusted partner for 3 years.",
       rating: 5
     },
@@ -276,9 +276,9 @@ const Home = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link to="/portfolio">
+            <Link to="/industries">
               <Button size="lg" variant="outline" className="text-lg px-8 text-black py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-black">
-                View Portfolio
+                View Industries
               </Button>
             </Link>
           </div>

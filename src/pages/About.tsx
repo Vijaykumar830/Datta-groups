@@ -51,13 +51,13 @@ const About = () => {
     {
       name: "Aravindh Thetakali",
       position: "Founder & CEO", 
-      description: "Visionary leader with over 5 years in international trade and technology solutions.",
+      description: "Visionary leader with over 5+ years in international trade and technology solutions.",
       expertise: ["Global Trading", "Technology Innovation"]
     },
     {
       name: "Veesam Sai ram",
       position: "Founder & CEO", 
-      description: "Visionary leader with over 15 years in international trade and technology solutions.",
+      description: "Visionary leader with over 5+ years in international trade and technology solutions.",
       expertise: ["Business Strategy", "Technology Innovation"]
     }
     
@@ -79,9 +79,9 @@ const About = () => {
               </span>
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Since 2015, we've been connecting the world through premium
+              Since 2020, we've been connecting the world through premium
               agricultural products and cutting-edge technology solutions,
-              serving clients across 50+ countries with unwavering commitment to
+              serving clients across 10+ States with unwavering commitment to
               quality and innovation.
             </p>
           </div>
