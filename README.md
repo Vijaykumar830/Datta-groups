@@ -1,7 +1,7 @@
 # 📦 Datta Groups – Premium Trading & Electronics Solutions Website
 
 ## 🌟 Overview  
-Datta Traders is a global trading and electronics solutions company specializing in **rice, seafood, paddy, coconut, maize export-import** and **advanced electronics solutions** (CCTV, biometric systems, home automation).  
+Datta Groups is a global trading and electronics solutions company specializing in **rice, seafood, paddy, coconut, maize export-import** and **advanced electronics solutions** (CCTV, biometric systems, home automation).  
 This website is designed to showcase Datta Traders as a premium brand with a **dark blue, white, and gold** color palette that conveys **trust, quality, and professionalism**.
 
 ---
