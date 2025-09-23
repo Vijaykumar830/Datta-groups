@@ -37,7 +37,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Numbers",
-      details: ["+91 90598 14449", "+91 63020 37915", "+91 63020 37915"],
+      details: ["+91 90598 14449", "+91 63020 37915"],
       action: "Call Now"
     },
     {
