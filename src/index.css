@@ -278,3 +278,18 @@
 .animate-slide-right {
   animation: slideInRight 0.8s ease-out forwards;
 }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
