@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Numbers",
-      details: ["+91 90598 14449", "+91 97034 62727"],
+      details: ["+91 94943 75381", "+91 97034 62727"],
       action: "Call Now",
     },
     {
@@ -239,7 +239,7 @@ const Contact = () => {
                       if (info.title === "Email Address")
                         window.location.href = `mailto:${info.details[0]}`;
                       else if (info.title === "Phone Numbers")
-                        window.location.href = `tel:+919059814449`;
+                        window.location.href = `tel:+919494375381`;
                       else if (info.title === "Office Address")
                         window.open(
                           "https://www.google.com/maps/dir/?api=1&destination=D.No.+11-1136,+1st+Floor,+Peddagummuluru,+Anakapalli,+Andhra+Pradesh,+531083,+India",
@@ -416,7 +416,7 @@ const Contact = () => {
                       <div className="flex items-center">
                         <Phone className="h-5 w-5 text-accent mr-3" />
                         <div>
-                          <p className="font-medium">+91 90598 14449</p>
+                          <p className="font-medium">+91 94943 75381</p>
                           <p className="text-sm text-muted-foreground">
                             Call Now
                           </p>
@@ -425,7 +425,7 @@ const Contact = () => {
                       <Button
                         size="sm"
                         onClick={() =>
-                          (window.location.href = "tel:+919059814449")
+                          (window.location.href = "tel:+919494375381")
                         }
                       >
                         Call

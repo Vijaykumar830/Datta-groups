@@ -344,7 +344,7 @@ const About = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link to="/portfolio">
+            <Link to="/industries">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                 View Our Work
               </Button>

@@ -29,8 +29,8 @@ const Header = () => {
             <div className="flex items-center space-x-4 flex-wrap">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+919059814449" className="hover:text-accent">
-                  +91 90598 14449
+                <a href="tel:+919494375381" className="hover:text-accent">
+                  +91 94943 75381
                 </a>
                 <a href="tel:+919703462727" className="hover:text-accent">
                   +91 97034 62727
