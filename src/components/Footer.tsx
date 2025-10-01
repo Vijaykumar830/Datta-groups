@@ -74,7 +74,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-6">
               <img
-                src="https://i.postimg.cc/59HcL5nr/Whats-App-Image-2025-09-22-at-17-10-10-9e594546.jpg"
+                src="https://i.ibb.co/Df4KgBbP/datta-logolarge.jpg"
                 alt="Datta Traders Logo"
                 className="h-14 w-14 rounded-lg"
               />
@@ -197,7 +197,7 @@ const Footer = () => {
 
               <div className="flex items-center space-x-3">
                 <Globe className="h-5 w-5 text-accent shrink-0" />
-                <a href="https://www.dattagroups.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">www.dattagroups.com</a>
+                <a href="https://www.dattagroups.in" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">www.dattagroups.com</a>
               </div>
             </div>
 

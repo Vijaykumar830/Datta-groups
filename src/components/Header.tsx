@@ -66,7 +66,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="https://i.postimg.cc/59HcL5nr/Whats-App-Image-2025-09-22-at-17-10-10-9e594546.jpg"
+              src="https://i.ibb.co/Df4KgBbP/datta-logolarge.jpg"
               alt="Datta Groups Logo"
               className="h-14 w-14 rounded-lg"
             />

@@ -3,13 +3,15 @@ import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
 import cors from "cors";
 
-const app = express();
+const app = express(); // ✅ Must be defined first
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors({
-  origin: "*" // Or restrict to your frontend URL
-}));
+app.use(
+  cors({
+    origin: "*", // Or restrict to your frontend URL
+  })
+);
 
 // POST route to send email
 app.post("/send-email", async (req, res) => {
@@ -21,15 +23,15 @@ app.post("/send-email", async (req, res) => {
       service: "gmail",
       auth: {
         user: "vijju830988@gmail.com", // Your Gmail
-        pass: "qrgtqphaqapfnxau",     // Gmail App Password
+        pass: "ixxemzxsqjnzqhgv", // Gmail App Password
       },
     });
 
     const mailOptions = {
       from: `"${name}" <aravindhdattagroups@gmail.com>`, // Must use verified Gmail
       replyTo: email, // User email for reply
-      to: ["aravindhdattagroups@gmail.com","sairamdattagroups@gmail.com"], // Receiver emails
-      subject: "Datta Groups Client New Contact Form Submission", // <-- added comma above
+      to: ["aravindhdattagroups@gmail.com", "sairamdattagroups@gmail.com","vijju830988@gmail.com"], // Receiver emails
+      subject: "Datta Groups Client New Contact Form Submission",
       html: `
         <h2>Datta Groups Client New Contact Form Submission</h2>
         <table border="1" cellspacing="0" cellpadding="8" style="border-collapse:collapse;">
@@ -55,5 +57,5 @@ app.post("/send-email", async (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
