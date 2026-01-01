@@ -120,52 +120,59 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, service: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
+  // 🔥 ONLY handleSubmit is updated — everything else SAME
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!formData.name || !formData.email || !formData.message) {
+    toast({
+      title: "Required fields missing",
+      description:
+        "Please fill in all required fields (Name, Email, Message).",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  try {
+    // ✅ PRODUCTION BACKEND URL
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
+    const response = await fetch(`${API_BASE}/send-email`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
       toast({
-        title: "Required fields missing",
+        title: "Message sent successfully!",
         description:
-          "Please fill in all required fields (Name, Email, Message).",
-        variant: "destructive",
-      });
-      return;
-    }
-    try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        // Make sure to use full URL
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+          "Thank you for contacting us. We'll get back to you within 24 hours.",
+        variant: "default",
       });
 
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description:
-            "Thank you for contacting us. We'll get back to you within 24 hours.",
-          variant: "default",
-        });
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          service: "",
-          message: "",
-        });
-      } else {
-        throw new Error("Failed to send");
-      }
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description:
-          "Please try again or contact us directly via phone or email or Fill the Google form.",
-        variant: "destructive",
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        message: "",
       });
+    } else {
+      throw new Error("Failed to send");
     }
-  };
+  } catch (error) {
+    toast({
+      title: "Error sending message",
+      description:
+        "Please try again or contact us directly via phone or email or Fill the Google form.",
+      variant: "destructive",
+    });
+  }
+};
 
   return (
     <div className="min-h-screen">
