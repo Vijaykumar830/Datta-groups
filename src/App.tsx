@@ -19,7 +19,7 @@ import Contact from "./pages/Contact";
 import Trading from "./pages/Trading";
 import NotFound from "./pages/NotFound";
 
-// 🎆 Festival System (sparkles + greeting)
+// 🎆 Festival System
 import FestivalAnimator from "./components/FestivalAnimator";
 
 const queryClient = new QueryClient();
@@ -33,13 +33,11 @@ const App: React.FC = () => {
         <Sonner />
 
         <BrowserRouter>
-          {/* 🎉 FESTIVAL EFFECTS + GREETING (GLOBAL, ALWAYS VISIBLE) */}
+          {/* 🎉 Festival Banner (fixed) */}
           <FestivalAnimator />
 
           {/* 🌍 MAIN APP LAYOUT */}
-          <div className="min-h-screen flex flex-col pt-10">
-            {/* pt-10 → space for fixed festival banner */}
-
+          <div className="min-h-screen flex flex-col">
             <Header />
 
             <main className="flex-1">

@@ -10,6 +10,8 @@ import seafoodProduct from "@/assets/seafood-product.jpg";
 import cctvInstallation from "@/assets/cctv-installation.jpg";
 import biometricSystem from "@/assets/biometric-system.jpg";
 import homeAutomation from "@/assets/home-automation.jpg";
+import riceBranImg from "@/assets/bran-rice.jpg";
+import rejectionRiceImg from "@/assets/rejection-rice.jpg";
 
 const TradingProducts = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -95,6 +97,24 @@ const TradingProducts = () => {
       specs: ["Security Systems", "PA Systems", "CCTV", "Automation Gadgets"],
       benefits: ["Diverse Product Line", "Trusted Brands"],
     },
+    {
+  id: 9,
+  name: "Rice Bran",
+  category: "agro",
+  image: riceBranImg,
+  origin: "Pan India",
+  specs: ["Feed Grade", "High Oil Content", "Bulk Supply", "Export Quality"],
+  benefits: ["Cattle Feed Industry", "Regular Supply", "Best Pricing"],
+},
+{
+  id: 10,
+  name: "Rejection Rice",
+  category: "agro",
+  image: rejectionRiceImg,
+  origin: "Pan India",
+  specs: ["Broken Rice", "Feed Grade", "Bulk Quantity", "Affordable"],
+  benefits: ["Poultry Feed", "Cattle Feed", "High Volume"],
+},
   ];
 
   const filtered = activeFilter === "all" ? products : products.filter(p => p.category === activeFilter);

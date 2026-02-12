@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,6 +20,9 @@ import seafoodProduct from "@/assets/seafood-product.jpg";
 import cctvInstallation from "@/assets/cctv-installation.jpg";
 import biometricSystem from "@/assets/biometric-system.jpg";
 import homeAutomation from "@/assets/home-automation.jpg";
+import riceBranImg from "@/assets/bran-rice.jpg";
+import rejectionRiceImg from "@/assets/rejection-rice.jpg";
+
 
 const Home = () => {
   const stats = [
@@ -49,6 +52,8 @@ const Home = () => {
   const products = [
     { name: "Premium Rice", image: riceProduct, category: "Trading" },
     { name: "Fresh Seafood", image: seafoodProduct, category: "Trading" },
+    { name: "Rice Bran", image: riceBranImg, category: "Trading" },
+    { name: "Rejection Rice", image: rejectionRiceImg, category: "Trading" },
     { name: "CCTV Systems", image: cctvInstallation, category: "Electronics" },
     { name: "Biometric Access", image: biometricSystem, category: "Electronics" },
     { name: "Smart Homes", image: homeAutomation, category: "Electronics" },
@@ -68,6 +73,28 @@ const Home = () => {
       rating: 5
     }
   ];
+
+  const scrollRef = useRef(null);
+const [isHover, setIsHover] = useState(false);
+
+useEffect(() => {
+  const container = scrollRef.current;
+  if (!container) return;
+
+  const scrollStep = () => {
+    if (!isHover) {
+      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+        container.scrollLeft = 0;
+      } else {
+        container.scrollLeft += 1;
+      }
+    }
+  };
+
+  const interval = setInterval(scrollStep, 20);
+  return () => clearInterval(interval);
+}, [isHover]);
+
 
   return (
     <div className="min-h-screen">
@@ -202,27 +229,58 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {products.map((product, index) => (
-              <Card key={index} className="card-elegant group cursor-pointer">
-                <div className="relative aspect-square overflow-hidden">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <Badge variant="secondary" className="text-xs">
-                      {product.category}
-                    </Badge>
-                  </div>
-                </div>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold text-center">{product.name}</h3>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="relative">
+
+  {/* LEFT ARROW */}
+  <button
+    onClick={() => scrollRef.current.scrollLeft -= 300}
+    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full"
+  >
+    ◀
+  </button>
+
+  {/* RIGHT ARROW */}
+  <button
+    onClick={() => scrollRef.current.scrollLeft += 300}
+    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full"
+  >
+    ▶
+  </button>
+
+  {/* SCROLL CONTAINER */}
+  <div
+    ref={scrollRef}
+    onMouseEnter={() => setIsHover(true)}
+    onMouseLeave={() => setIsHover(false)}
+    className="flex overflow-x-auto gap-6 px-10 pb-4 scroll-smooth"
+    style={{ scrollbarWidth: "none" }}
+  >
+    {products.map((product, index) => (
+      <Card
+        key={index}
+        className="min-w-[240px] hover:scale-105 transition-transform duration-300"
+      >
+        <div className="relative aspect-square overflow-hidden">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-2 right-2">
+            <Badge variant="secondary" className="text-xs">
+              {product.category}
+            </Badge>
           </div>
+        </div>
+        <CardContent className="p-4">
+          <h3 className="font-semibold text-center">{product.name}</h3>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
+
+
         </div>
       </section>
 

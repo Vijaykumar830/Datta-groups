@@ -22,7 +22,7 @@ const Trading = () => {
       name: "Premium Rice",
       image: riceProduct,
       description: "High-quality rice varieties including Basmati, Jasmine, and Long Grain rice for global export.",
-      varieties: ["Basmati Rice", "Jasmine Rice", "Long Grain", "Short Grain", "Brown Rice"],
+      varieties: ["Basmati Rice", "Jasmine Rice", "Long Grain", "Short Grain", "Brown Rice","Rejection Rice", "Rice Bran"],
       features: ["Export Quality", "Pest Free", "Moisture Controlled", "International Standards"],
       markets: ["Andhra Pradesh", "Telangana", "Karnataka", "Kerala", "Tamil Nadu"],
     },

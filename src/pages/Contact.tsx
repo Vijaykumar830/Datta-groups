@@ -120,23 +120,19 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, service: value }));
   };
 
-  // 🔥 ONLY handleSubmit is updated — everything else SAME
-
-const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   if (!formData.name || !formData.email || !formData.message) {
     toast({
       title: "Required fields missing",
-      description:
-        "Please fill in all required fields (Name, Email, Message).",
+      description: "Please fill Name, Email, and Message.",
       variant: "destructive",
     });
     return;
   }
 
   try {
-    // ✅ PRODUCTION BACKEND URL
     const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
     const response = await fetch(`${API_BASE}/send-email`, {
@@ -145,34 +141,30 @@ const handleSubmit = async (e: React.FormEvent) => {
       body: JSON.stringify(formData),
     });
 
-    if (response.ok) {
-      toast({
-        title: "Message sent successfully!",
-        description:
-          "Thank you for contacting us. We'll get back to you within 24 hours.",
-        variant: "default",
-      });
+    if (!response.ok) throw new Error("Failed");
 
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: "",
-        message: "",
-      });
-    } else {
-      throw new Error("Failed to send");
-    }
-  } catch (error) {
     toast({
-      title: "Error sending message",
-      description:
-        "Please try again or contact us directly via phone or email or Fill the Google form.",
+      title: "Message sent successfully!",
+      description: "We will contact you soon.",
+    });
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      service: "",
+      message: "",
+    });
+  } catch (err) {
+    toast({
+      title: "Error",
+      description: "Backend not reachable. Please try again.",
       variant: "destructive",
     });
   }
 };
+
 
   return (
     <div className="min-h-screen">

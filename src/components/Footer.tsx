@@ -22,6 +22,8 @@ const Footer = () => {
     "Paddy Export",
     "Coconut Products",
     "Maize Trading",
+    "Rice Bran",
+    "Rejection Rice",
   ];
 
   const electronicsServices = [
@@ -74,10 +76,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-6">
               <img
-                src="https://i.ibb.co/Df4KgBbP/datta-logolarge.jpg"
-                alt="Datta Traders Logo"
-                className="h-14 w-14 rounded-lg"
-              />
+  src="https://i.ibb.co/W4fq9jyk/Logo-page-0001.jpg"
+  alt="Datta Groups Logo"
+  className="h-14 w-14 rounded-full object-cover bg-white p-1 border border-gray-200"
+/>
+
               <div>
                 <h2 className="font-heading font-bold text-xl">DATTA GROUPS</h2>
                 <p className="text-sm text-accent">
@@ -170,10 +173,10 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-accent mt-0.5 shrink-0" />
                 <div>
                   <p className="text-primary-foreground/80">
-                    D.No. 11-1136, 1st Floor, Peddagummuluru (Adduroad)
+                    D.No. 11-1136, 1st Floor, Peddagummuluru (Addaroad)
                   </p>
                   <p className="text-primary-foreground/80">
-                    Near HP Petrol Bunk, (NH-16), S Rayavaram (M), Anakapalli - 531083
+                    Near HP Petrol Bunk, (NH-16), S Rayavaram (M), Anakapalli - 531083 Andhra Pradesh, India
                   </p>
                 </div>
               </div>
