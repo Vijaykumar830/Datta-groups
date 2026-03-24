@@ -25,8 +25,8 @@ const Header = () => {
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-2 text-sm flex-wrap gap-2">
-            <div className="flex items-center space-x-4 flex-wrap">
+          <div className="flex items-center justify-between py-2 text-sm gap-2">
+            <div className="flex items-center space-x-4 overflow-x-auto whitespace-nowrap">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <a href="tel:+919494375381" className="hover:text-accent">
