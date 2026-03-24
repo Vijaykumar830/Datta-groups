@@ -162,6 +162,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to="/trading"
+                    onClick={() => window.scrollTo(0, 0)}
                     className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                   >
                     {product}
@@ -170,7 +171,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
           {/* Electronics Services */}
           <div>
             <h3 className="font-heading font-semibold text-lg mb-6">
@@ -181,6 +181,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to="/electronics"
+                    onClick={() => window.scrollTo(0, 0)}
                     className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                   >
                     {service}
@@ -279,6 +280,7 @@ const Footer = () => {
                   <li key={index}>
                     <Link
                       to={link.href}
+                      onClick={() => window.scrollTo(0, 0)}
                       className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                     >
                       {link.name}

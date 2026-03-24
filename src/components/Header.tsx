@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, Globe } from "lucide-react";
@@ -7,6 +7,10 @@ import dattaLogo from "@/assets/Logo_page-0001.jpg"; // ✅ Updated logo path
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -75,10 +79,10 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-  src="https://i.ibb.co/W4fq9jyk/Logo-page-0001.jpg"
-  alt="Datta Groups Logo"
-  className="h-14 w-14 rounded-full object-cover bg-white p-1 border border-gray-200"
-/>
+              src="https://i.ibb.co/W4fq9jyk/Logo-page-0001.jpg"
+              alt="Datta Groups Logo"
+              className="h-14 w-14 rounded-full object-cover bg-white p-1 border border-gray-200"
+            />
 
             <div>
               <h1 className="font-heading font-bold text-xl text-foreground">
