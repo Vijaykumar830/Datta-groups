@@ -229,7 +229,7 @@ const Footer = () => {
                     href="tel:+916262616153"
                     className="text-primary-foreground/80 hover:text-accent"
                   >
-                    +91 97034 62727
+                    +91 62626 16153
                   </a>
                 </div>
               </div>
