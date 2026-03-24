@@ -35,10 +35,14 @@ const Footer = () => {
   ];
 
   const quickLinks = [
+    { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "Trading", href: "/trading" },
+    { name: "Electronics", href: "/electronics" },
     { name: "Industries Served", href: "/industries" },
     { name: "Products", href: "/products" },
     { name: "Contact Us", href: "/contact" },
+    
   ];
 
   return (
