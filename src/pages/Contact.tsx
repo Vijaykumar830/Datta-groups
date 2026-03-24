@@ -43,13 +43,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Numbers",
-      details: ["+91 94943 75381", "+91 97034 62727"],
+      details: ["+91 94943 75381", "+91 97034 62727","+91 62626 16153"],
       action: "Call Now",
     },
     {
       icon: Mail,
       title: "Email Address",
-      details: ["aravindhdattagroups@gmail.com", "sairamdattagroups@gmail.com"],
+      details: ["aravindhdattagroups@gmail.com", "sairamdattagroups@gmail.com","rajeshdattagroups@gmail.com"],
       action: "Send Email",
     },
     {

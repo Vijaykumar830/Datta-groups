@@ -59,6 +59,12 @@ const About = () => {
       position: "Founder & CEO", 
       description: "Visionary leader with over 5+ years in international trade and technology solutions.",
       expertise: ["Business Strategy", "Technology Innovation"]
+    },
+    {
+      name: "Bondi Rajesh",
+      position: "Founder & CEO", 
+      description: "Dynamic and results-driven professional with 5+ years of experience in international trade and innovative technology solutions",
+      expertise: ["Business Strategy", "Technology Innovation"]
     }
     
   ];
@@ -261,9 +267,9 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto flex flex-wrap gap-6 justify-center">
+          <div className="max-w-6xl mx-auto flex gap-6 justify-center">
             {team.map((member, index) => (
-              <Card key={index} className="card-elegant w-full sm:w-[48%]">
+              <Card key={index} className="card-elegant flex-1 min-w-[250px]">
                 <CardContent className="p-8 text-center">
                   <div className="w-24 h-24 bg-gradient-gold rounded-full mx-auto mb-6 flex items-center justify-center">
                     <Users className="h-12 w-12 text-accent-foreground" />

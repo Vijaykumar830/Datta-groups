@@ -35,6 +35,9 @@ const Header = () => {
                 <a href="tel:+919703462727" className="hover:text-accent">
                   +91 97034 62727
                 </a>
+                <a href="tel:+916262616153" className="hover:text-accent">
+                  +91 62626 16153
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
@@ -49,6 +52,12 @@ const Header = () => {
                   className="hover:text-accent"
                 >
                   sairamdattagroups@gmail.com
+                </a>
+                <a
+                  href="mailto:rajeshdattagroups@gmail.com"
+                  className="hover:text-accent"
+                >
+                  rajeshdattagroups@gmail.com
                 </a>
               </div>
             </div>

@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Facebook,
+  Twitter,
+  Linkedin,
   Instagram,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 import dattaLogo from "@/assets/datta-traders-logo.jpg";
 
@@ -76,10 +76,10 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-6">
               <img
-  src="https://i.ibb.co/W4fq9jyk/Logo-page-0001.jpg"
-  alt="Datta Groups Logo"
-  className="h-14 w-14 rounded-full object-cover bg-white p-1 border border-gray-200"
-/>
+                src="https://i.ibb.co/W4fq9jyk/Logo-page-0001.jpg"
+                alt="Datta Groups Logo"
+                className="h-14 w-14 rounded-full object-cover bg-white p-1 border border-gray-200"
+              />
 
               <div>
                 <h2 className="font-heading font-bold text-xl">DATTA GROUPS</h2>
@@ -94,34 +94,61 @@ const Footer = () => {
               Committed to quality, reliability, and innovation.
             </p>
             <div className="flex space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-accent hover:text-accent-foreground"
+              <a
+                href="https://facebook.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-accent hover:text-accent-foreground"
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent hover:text-accent-foreground"
+                >
+                  <Facebook className="h-5 w-5" />
+                </Button>
+              </a>
+
+              <a
+                href="https://twitter.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-accent hover:text-accent-foreground"
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent hover:text-accent-foreground"
+                >
+                  <Twitter className="h-5 w-5" />
+                </Button>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-accent hover:text-accent-foreground"
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent hover:text-accent-foreground"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+              </a>
+
+              <a
+                href="https://www.instagram.com/dattagroups?igsh=OWxkdGtqOHhod20y"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Instagram className="h-5 w-5" />
-              </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent hover:text-accent-foreground"
+                >
+                  <Instagram className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -176,7 +203,8 @@ const Footer = () => {
                     D.No. 11-1136, 1st Floor, Peddagummuluru (Addaroad)
                   </p>
                   <p className="text-primary-foreground/80">
-                    Near HP Petrol Bunk, (NH-16), S Rayavaram (M), Anakapalli - 531083 Andhra Pradesh, India
+                    Near HP Petrol Bunk, (NH-16), S Rayavaram (M), Anakapalli -
+                    531083 Andhra Pradesh, India
                   </p>
                 </div>
               </div>
@@ -184,23 +212,62 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-accent shrink-0" />
                 <div className="flex flex-col">
-                  <a href="tel:+919494375381" className="text-primary-foreground/80 hover:text-accent">+91 94943 75381</a>
-        
-                  <a href="tel:+919703462727" className="text-primary-foreground/80 hover:text-accent">+91 97034 62727</a>
+                  <a
+                    href="tel:+919494375381"
+                    className="text-primary-foreground/80 hover:text-accent"
+                  >
+                    +91 94943 75381
+                  </a>
+
+                  <a
+                    href="tel:+919703462727"
+                    className="text-primary-foreground/80 hover:text-accent"
+                  >
+                    +91 97034 62727
+                  </a>
+                  <a
+                    href="tel:+916262616153"
+                    className="text-primary-foreground/80 hover:text-accent"
+                  >
+                    +91 97034 62727
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-accent shrink-0" />
                 <div className="flex flex-col">
-                  <a href="mailto:aravindhdattagroups@gmail.com" className="text-primary-foreground/80 hover:text-accent">aravindhdattagroups@gmail.com</a>
-                  <a href="mailto:sairamdattagroups@gmail.com" className="text-primary-foreground/80 hover:text-accent">sairamdattagroups@gmail.com</a>
+                  <a
+                    href="mailto:aravindhdattagroups@gmail.com"
+                    className="text-primary-foreground/80 hover:text-accent"
+                  >
+                    aravindhdattagroups@gmail.com
+                  </a>
+                  <a
+                    href="mailto:sairamdattagroups@gmail.com"
+                    className="text-primary-foreground/80 hover:text-accent"
+                  >
+                    sairamdattagroups@gmail.com
+                  </a>
+                  <a
+                    href="mailto:rajeshdattagroups@gmail.com"
+                    className="text-primary-foreground/80 hover:text-accent"
+                  >
+                    rajeshdattagroups@gmail.com
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Globe className="h-5 w-5 text-accent shrink-0" />
-                <a href="https://www.dattagroups.in" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">www.dattagroups.com</a>
+                <a
+                  href="https://www.dattagroups.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-foreground/80 hover:text-accent"
+                >
+                  www.dattagroups.in
+                </a>
               </div>
             </div>
 
@@ -229,7 +296,8 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between text-sm text-primary-foreground/60">
             <p>
-              © 2024 Datta Traders. All rights reserved. | Privacy Policy | Terms of Service
+              © 2024 Datta Traders. All rights reserved. | Privacy Policy |
+              Terms of Service
             </p>
             <p className="mt-2 md:mt-0">
               Designed with excellence for global trading success.
