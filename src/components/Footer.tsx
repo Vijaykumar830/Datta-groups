@@ -41,8 +41,7 @@ const Footer = () => {
     { name: "Electronics", href: "/electronics" },
     { name: "Industries Served", href: "/industries" },
     { name: "Products", href: "/products" },
-    { name: "Contact Us", href: "/contact" },
-    
+    { name: "Contact Us", href: "/contact" }, 
   ];
 
   return (

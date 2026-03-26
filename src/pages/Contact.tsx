@@ -120,9 +120,10 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, service: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
   e.preventDefault();
 
+  // validation
   if (!formData.name || !formData.email || !formData.message) {
     toast({
       title: "Required fields missing",
@@ -133,12 +134,18 @@ const Contact = () => {
   }
 
   try {
-    const API_BASE = import.meta.env.VITE_API_BASE_URL;
-
-    const response = await fetch(`${API_BASE}/send-email`, {
+    const response = await fetch("https://formspree.io/f/mjgpvaqr", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...formData,
+
+        // 👉 send to multiple emails
+        _cc: "aravindhdattagroups@gmail.com",     // visible copy
+        _bcc: "sairamdattagroups@gmail.com",     // hidden copy
+      }),
     });
 
     if (!response.ok) throw new Error("Failed");
@@ -148,6 +155,7 @@ const Contact = () => {
       description: "We will contact you soon.",
     });
 
+    // reset form
     setFormData({
       name: "",
       email: "",
@@ -156,10 +164,11 @@ const Contact = () => {
       service: "",
       message: "",
     });
+
   } catch (err) {
     toast({
       title: "Error",
-      description: "Backend not reachable. Please try again.",
+      description: "Failed to send message",
       variant: "destructive",
     });
   }
